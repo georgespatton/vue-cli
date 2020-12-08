@@ -47,9 +47,9 @@ VUE_APP_NOT_SECRET_CODE=some_value
 ```
 
 ::: warning
-Do not store any secrets (such as private API keys) in your app!
+Do not store any secrets (such as private API keys) in your app or .env files!
 
-Environment variables are embedded into the build, meaning anyone can view them by inspecting your app's files.
+Environment variables are embedded into the build, meaning anyone can view them by inspecting your app's files or .env files directly.
 :::
 
 Note that only `NODE_ENV`, `BASE_URL`, and variables that start with `VUE_APP_` will be statically embedded into the *client bundle* with `webpack.DefinePlugin`. It is to avoid accidentally exposing a private key on the machine that could have the same name.
